@@ -16,3 +16,11 @@ MainWindow::~MainWindow()
 }
 
 
+
+void MainWindow::on_sendButton_clicked()
+{
+    QString dialog = (ui->chatWindow->toPlainText() + "\n\n" + ui->messageWindow->toPlainText());
+
+    ui->chatWindow->setText(dialog);
+}
+
