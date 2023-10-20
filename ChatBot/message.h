@@ -4,6 +4,8 @@
 
 #include <ctime>
 #include <string>
+#include <iostream>
+#include <fstream>
 
 using namespace std;
 
@@ -46,6 +48,18 @@ public:
     /// Геттер для сообщения (не изменяет объекты);
     /// M - сообщение;
     string GetM() const;
+
+
+    /// Метод для вывода в консоль данных записаных в класс;
+    void Print();
+
+
+    /// Метод записи класса в файл;
+    void Write(message Message);
+
+
+    /// Метод чтения класса из файла;
+    void Read(message Message);
 };
 
 #endif // MESSAGE_H
