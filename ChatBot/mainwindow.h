@@ -3,7 +3,15 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QTextStream>
+#include <QDebug>
 
+#include "message.h"
+#include "user.h"
+#include "loginwindow.h"
+#include "signinwindow.h"
+
+using namespace std;
 
 
 

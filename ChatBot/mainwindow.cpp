@@ -16,11 +16,29 @@ MainWindow::~MainWindow()
 }
 
 
+bool isEmpty = true;
 
 void MainWindow::on_sendButton_clicked()
 {
-    QString dialog = (ui->chatWindow->toPlainText() + "\n\n" + ui->messageWindow->toPlainText());
+    message User;
+    QString dialog;
 
+    if (isEmpty)
+    {
+        dialog = ui->messageWindow->toPlainText();
+        isEmpty = false;
+    }
+    else
+    {
+        /// создаем экземпляр класса QString, в который добавляем текст из окна чата + текст из окна сообщения;
+        dialog = (ui->chatWindow->toPlainText() + "\n\n" + ui->messageWindow->toPlainText());
+    }
+    User.setT();
+    User.setN("UserName");
+    User.setM(ui->messageWindow->toPlainText());
+    User.Print();
+    User.Write(User);
+    ///вывод в окно чата содержимое экземпляра класса QString;
     ui->chatWindow->setText(dialog);
 }
 

@@ -3,6 +3,37 @@
 
 string path = "Data.txt";
 
+time_t message::getT() const
+{
+    return T;
+}
+
+void message::setT()
+{
+    time_t timeT;
+    this->T = time(&timeT);
+}
+
+QString message::getN() const
+{
+    return N;
+}
+
+void message::setN(const QString &newN)
+{
+    N = newN;
+}
+
+QString message::getM() const
+{
+    return M;
+}
+
+void message::setM(const QString &newM)
+{
+    M = newM;
+}
+
 message::message()
 {
     T = 0;
@@ -10,39 +41,9 @@ message::message()
     M = "Empty";
 }
 
-void message::SetT(time_t T)
-{
-    this->T=T;
-}
-
-void message::SetN(string N)
-{
-    this->N=N;
-}
-
-void message::SetM(string M)
-{
-    this->M=M;
-}
-
-time_t message::GetT() const
-{
-    return T;
-}
-
-string message::GetN() const
-{
-    return N;
-}
-
-string message::GetM() const
-{
-    return M;
-}
-
 void message::Print()
 {
-    cout << T << "\t" << N << "\t" << M << endl;
+    qInfo() << T << N << M;
 }
 
 void message::Write(message Message)
@@ -52,11 +53,11 @@ void message::Write(message Message)
 
     if (!fout.is_open())
     {
-        cout << "error opening file" << endl;
+        qInfo() << "error opening file";
     }
     else
     {
-        cout << "file open" << endl;
+        qInfo() << "file open";
         fout.write((char*)&Message, sizeof(message));
     }
     fout.close();
@@ -69,11 +70,11 @@ void message::Read(message Message)
 
     if (!fin.is_open())
     {
-        cout << "error opening file" << endl;
+        qInfo() << "error opening file";
     }
     else
     {
-        cout << "file open" << endl;
+        qInfo() << "file open";
         while (fin.read((char*)&Message, sizeof(message)))
         {
             Message.Print();
