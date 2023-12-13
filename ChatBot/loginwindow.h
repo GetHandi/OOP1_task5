@@ -1,16 +1,22 @@
+
 #ifndef LOGINWINDOW_H
 #define LOGINWINDOW_H
 
 #include <QDialog>
+#include <QMessageBox>
+#include <QString>
 
-#include "message.h"
-#include "user.h"
 #include "mainwindow.h"
 #include "signinwindow.h"
+#include "message.h"
+#include "user.h"
+#include "ui_loginwindow.h"
+#include "globals.cpp"
 
-namespace Ui {
-class loginwindow;
-}
+
+QT_BEGIN_NAMESPACE
+namespace Ui {class loginwindow;}
+QT_END_NAMESPACE
 
 class loginwindow : public QDialog
 {

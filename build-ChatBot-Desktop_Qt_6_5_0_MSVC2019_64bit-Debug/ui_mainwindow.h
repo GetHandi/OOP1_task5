@@ -28,7 +28,6 @@ public:
     QTextEdit *messageWindow;
     QLabel *nameChatbot;
     QPushButton *sendButton;
-    QPushButton *pushButton;
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -49,9 +48,6 @@ public:
         sendButton = new QPushButton(centralwidget);
         sendButton->setObjectName("sendButton");
         sendButton->setGeometry(QRect(580, 490, 41, 41));
-        pushButton = new QPushButton(centralwidget);
-        pushButton->setObjectName("pushButton");
-        pushButton->setGeometry(QRect(640, 470, 80, 24));
         MainWindow->setCentralWidget(centralwidget);
 
         retranslateUi(MainWindow);
@@ -64,7 +60,6 @@ public:
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         nameChatbot->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:12pt; font-weight:700;\">ChatBot Veniamin ver. 0.1</span></p></body></html>", nullptr));
         sendButton->setText(QCoreApplication::translate("MainWindow", "SEND", nullptr));
-        pushButton->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
     } // retranslateUi
 
 };

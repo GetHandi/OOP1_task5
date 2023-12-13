@@ -9,8 +9,10 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    loginwindow.cpp \
+    foo.cpp \
+    globals.cpp \
     main.cpp \
+    loginwindow.cpp \
     mainwindow.cpp \
     message.cpp \
     signinwindow.cpp \
@@ -27,6 +29,8 @@ FORMS += \
     loginwindow.ui \
     mainwindow.ui \
     signinwindow.ui
+
+#INCLUDEPATH += "D:\GetHandi\hobby\qt\OOP1_task5\ChatBot"
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

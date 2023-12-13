@@ -1,29 +1,32 @@
 
 #include "user.h"
 
-QString user::getName() const
+User::User()
 {
-    return name;
+    id = 0;
+    login = "login";
+    password = "password";
 }
 
-void user::setName(const QString &newName)
+User::User(int new_id, const QString &new_login, const QString &new_password)
 {
-    name = newName;
+    id = new_id;
+    login = new_login;
+    password = new_password;
 }
 
-QString user::getPassword() const
+QString User::getLogin() const
+{
+    return login;
+}
+
+QString User::getPassword() const
 {
     return password;
 }
 
-void user::setPassword(const QString &newPassword)
+int User::getId() const
 {
-    password = newPassword;
-}
-
-user::user()
-{
-    name = "user";
-    password = "0000";
+    return id;
 }
 

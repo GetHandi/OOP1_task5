@@ -5,15 +5,15 @@
 #include <QMainWindow>
 #include <QTextStream>
 #include <QDebug>
+#include <QMessageBox>
+#include <ctime>
 
 #include "message.h"
 #include "user.h"
-#include "loginwindow.h"
+#include "ui_mainwindow.h"
 #include "signinwindow.h"
-
-using namespace std;
-
-
+#include "loginwindow.h"
+#include "globals.cpp"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }

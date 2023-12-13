@@ -2,34 +2,40 @@
 #ifndef USER_H
 #define USER_H
 
-#include <QString>
 #include <QDebug>
-#include <iostream>
+#include <QFile>
+#include <QDataStream>
 
 
-class user
+class User
 {
-    /// объекты класса name - имя, password - пароль;
-    QString name, password;
+private:
+    /// объекты класса id - номер, login - имя, password - пароль;
+    int id;
+    QString login, password;
+
+
 public:
     /// конструктор по умолчанию;
-    user();
+    User();
 
-    /// Геттер для имени (не изменяет объекты);
-    /// name - имя;
-    QString getName() const;
+    /// конструктор;
+    User(int new_id, const QString &new_login, const QString &new_password);
 
-    /// Сеттер для имени;
-    /// name - имя;
-    void setName(const QString &newName);
+    /// Геттер для логина (не изменяет объекты);
+    QString getLogin() const;
 
     /// Геттер для пароля (не изменяет объекты);
-    /// password - пароль;
     QString getPassword() const;
 
-    /// Сеттер для пароля;
-    /// password - пароль;
-    void setPassword(const QString &newPassword);
+    /// Геттер для номера (не изменяет объекты);
+    int getId() const;
+
+    /// Дружественная функция чтения из файла;
+    friend QDataStream& operator>>( QDataStream& D, User& U );
+
+    /// Дружественная функция записи в файл;
+    friend QDataStream& operator<<( QDataStream& D, const User& U );
 };
 
 #endif // USER_H
