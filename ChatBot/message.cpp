@@ -2,19 +2,19 @@
 
 Message::Message()
 {
-    time = "00:00";
+    time = QTime::currentTime();
     name = "name";
     message = "message";
 }
 
-Message::Message(const QString &new_time, const QString &new_name, const QString &new_message)
+Message::Message(const QTime &new_time, const QString &new_name, const QString &new_message)
 {
     time = new_time;
     name = new_name;
     message = new_message;
 }
 
-QString Message::getTime() const
+QTime Message::getTime() const
 {
     return time;
 }

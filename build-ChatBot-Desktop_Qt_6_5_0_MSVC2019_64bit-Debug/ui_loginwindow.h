@@ -27,7 +27,7 @@ class Ui_loginwindow
 {
 public:
     QGroupBox *groupBox;
-    QWidget *widget;
+    QWidget *layoutWidget;
     QVBoxLayout *verticalLayout;
     QHBoxLayout *horizontalLayout_3;
     QLabel *labelLogin;
@@ -51,15 +51,15 @@ public:
         groupBox = new QGroupBox(loginwindow);
         groupBox->setObjectName("groupBox");
         groupBox->setGeometry(QRect(80, 40, 251, 211));
-        widget = new QWidget(groupBox);
-        widget->setObjectName("widget");
-        widget->setGeometry(QRect(20, 60, 216, 118));
-        verticalLayout = new QVBoxLayout(widget);
+        layoutWidget = new QWidget(groupBox);
+        layoutWidget->setObjectName("layoutWidget");
+        layoutWidget->setGeometry(QRect(20, 60, 216, 118));
+        verticalLayout = new QVBoxLayout(layoutWidget);
         verticalLayout->setObjectName("verticalLayout");
         verticalLayout->setContentsMargins(0, 0, 0, 0);
         horizontalLayout_3 = new QHBoxLayout();
         horizontalLayout_3->setObjectName("horizontalLayout_3");
-        labelLogin = new QLabel(widget);
+        labelLogin = new QLabel(layoutWidget);
         labelLogin->setObjectName("labelLogin");
 
         horizontalLayout_3->addWidget(labelLogin);
@@ -68,7 +68,7 @@ public:
 
         horizontalLayout_3->addItem(horizontalSpacer_3);
 
-        lineLogin = new QLineEdit(widget);
+        lineLogin = new QLineEdit(layoutWidget);
         lineLogin->setObjectName("lineLogin");
 
         horizontalLayout_3->addWidget(lineLogin);
@@ -78,7 +78,7 @@ public:
 
         horizontalLayout_4 = new QHBoxLayout();
         horizontalLayout_4->setObjectName("horizontalLayout_4");
-        labelPassword = new QLabel(widget);
+        labelPassword = new QLabel(layoutWidget);
         labelPassword->setObjectName("labelPassword");
 
         horizontalLayout_4->addWidget(labelPassword);
@@ -87,7 +87,7 @@ public:
 
         horizontalLayout_4->addItem(horizontalSpacer_4);
 
-        linePassword = new QLineEdit(widget);
+        linePassword = new QLineEdit(layoutWidget);
         linePassword->setObjectName("linePassword");
 
         horizontalLayout_4->addWidget(linePassword);
@@ -101,7 +101,7 @@ public:
 
         horizontalLayout_5 = new QHBoxLayout();
         horizontalLayout_5->setObjectName("horizontalLayout_5");
-        buttonSignIn = new QPushButton(widget);
+        buttonSignIn = new QPushButton(layoutWidget);
         buttonSignIn->setObjectName("buttonSignIn");
 
         horizontalLayout_5->addWidget(buttonSignIn);
@@ -110,7 +110,7 @@ public:
 
         horizontalLayout_5->addItem(horizontalSpacer_5);
 
-        buttonLogIn = new QPushButton(widget);
+        buttonLogIn = new QPushButton(layoutWidget);
         buttonLogIn->setObjectName("buttonLogIn");
 
         horizontalLayout_5->addWidget(buttonLogIn);
@@ -120,6 +120,9 @@ public:
 
 
         retranslateUi(loginwindow);
+
+        buttonLogIn->setDefault(true);
+
 
         QMetaObject::connectSlotsByName(loginwindow);
     } // setupUi

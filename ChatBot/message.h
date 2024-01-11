@@ -13,17 +13,19 @@ class Message
 {
 private:
     /// объекты класса time, name, message - время, имя, сообщение;
-    QString time, name, message;
+    QTime time;
+    QString name, message;
+
 
 public:
     /// конструктор по умолчанию;
     Message();
 
     /// конструктор;
-    Message(const QString &new_time, const QString &new_name, const QString &new_message);
+    Message(const QTime &new_time, const QString &new_name, const QString &new_message);
 
     /// Геттер для времени (не изменяет объекты);
-    QString getTime() const;
+    QTime getTime() const;
 
     /// Геттер для имени (не изменяет объекты);
     QString getName() const;

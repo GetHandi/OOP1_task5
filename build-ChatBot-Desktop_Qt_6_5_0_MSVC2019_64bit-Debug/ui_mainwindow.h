@@ -48,9 +48,13 @@ public:
         sendButton = new QPushButton(centralwidget);
         sendButton->setObjectName("sendButton");
         sendButton->setGeometry(QRect(580, 490, 41, 41));
+        sendButton->setAutoDefault(false);
         MainWindow->setCentralWidget(centralwidget);
 
         retranslateUi(MainWindow);
+
+        sendButton->setDefault(true);
+
 
         QMetaObject::connectSlotsByName(MainWindow);
     } // setupUi

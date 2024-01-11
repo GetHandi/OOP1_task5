@@ -101,6 +101,7 @@ public:
         horizontalLayout_5->setObjectName("horizontalLayout_5");
         buttonSignIn = new QPushButton(layoutWidget);
         buttonSignIn->setObjectName("buttonSignIn");
+        buttonSignIn->setAutoDefault(false);
 
         horizontalLayout_5->addWidget(buttonSignIn);
 
@@ -109,6 +110,9 @@ public:
 
 
         retranslateUi(signinwindow);
+
+        buttonSignIn->setDefault(true);
+
 
         QMetaObject::connectSlotsByName(signinwindow);
     } // setupUi
