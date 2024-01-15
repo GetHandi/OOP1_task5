@@ -15,20 +15,17 @@ SOURCES += \
     loginwindow.cpp \
     mainwindow.cpp \
     message.cpp \
-    signinwindow.cpp \
     user.cpp
 
 HEADERS += \
     loginwindow.h \
     mainwindow.h \
     message.h \
-    signinwindow.h \
     user.h
 
 FORMS += \
     loginwindow.ui \
-    mainwindow.ui \
-    signinwindow.ui
+    mainwindow.ui
 
 #INCLUDEPATH += "D:\GetHandi\hobby\qt\OOP1_task5\ChatBot"
 
@@ -36,3 +33,6 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    recources.qrc

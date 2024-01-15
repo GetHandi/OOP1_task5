@@ -8,6 +8,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
+
     //прописать автоотправку сообщения с меню или с приветствием;
 
 }
@@ -43,9 +44,8 @@ void MainWindow::on_sendButton_clicked()
         ui->messageWindow->clear();
 
         // Вывод сообщений пользователя в чат;
-
-        ui->chatWindow->append("<font color='brown'><strong>" + message.getName() + "</strong></font><br />" + message.getMessage() + "<br />"
-                               + "<small>" + message.getTime().toString("hh:mm") + "</small>");
+        ui->chatWindow->append("<font color='green'><strong>" + message.getName() + "</strong></font><br />" + message.getMessage() + "<br />"
+                               + "<small>" + message.getTime().toString("hh:mm") + "</small></background>");
         ui->chatWindow->setAlignment(Qt::AlignRight);
         // Реализация ответа бота;
         QString answer = "тестовый ответ";
@@ -55,8 +55,9 @@ void MainWindow::on_sendButton_clicked()
         Message message_bot (QTime::currentTime(), CHAT_BOT_NAME, answer);
 
         // Вывод сообщений бота в чат;
-        ui->chatWindow->append("<font color='brown'><strong>" + message_bot.getName() + "</strong></font><br />" + message_bot.getMessage() + "<br />"
+        ui->chatWindow->append("<font color='red'><strong>" + message_bot.getName() + "</strong></font><br />" + message_bot.getMessage() + "<br />"
                                + "<small>" + message_bot.getTime().toString("hh:mm") + "</small>");
+
         ui->chatWindow->setAlignment(Qt::AlignLeft);
 
         // Добавление полученных экземпляров класса Message в файл базы данных сообщение - "message_data.bin";

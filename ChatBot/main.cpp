@@ -1,20 +1,35 @@
 #include <QApplication>
 
 #include "loginwindow.h"
-#include "signinwindow.h"
 #include "mainwindow.h"
 #include "message.h"
 #include "user.h"
 
+#include <QDebug>
+#include <QMap>
+#include <QVector>
 
 
 int main(int argc, char *argv[])
 {
     setlocale(LC_ALL, "RUSSIAN");
     QApplication a(argc, argv);
+
+
+
     ///MainWindow w;
     loginwindow w;
+    w.setWindowTitle("Чат-бот LUM");
     w.show();
+
+    QMap <QString, QVector<QString>> hi;
+    hi["hi"] = {"Привет", "Прив", "Hello", "Hi", "Здравствуй",
+                                                "Здарова", "Здравствуйте", "Добрый день", "Доброго времени суток"};
+
+    for (auto now : hi["hi"])
+    {
+        qInfo() << now << " ";
+    }
 
 
 

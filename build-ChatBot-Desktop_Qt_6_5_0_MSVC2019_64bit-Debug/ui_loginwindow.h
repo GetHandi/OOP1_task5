@@ -12,112 +12,130 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
-#include <QtWidgets/QGroupBox>
-#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
-#include <QtWidgets/QSpacerItem>
-#include <QtWidgets/QVBoxLayout>
-#include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
 
 class Ui_loginwindow
 {
 public:
-    QGroupBox *groupBox;
-    QWidget *layoutWidget;
-    QVBoxLayout *verticalLayout;
-    QHBoxLayout *horizontalLayout_3;
-    QLabel *labelLogin;
-    QSpacerItem *horizontalSpacer_3;
+    QLabel *label;
+    QLabel *label_2;
     QLineEdit *lineLogin;
-    QHBoxLayout *horizontalLayout_4;
-    QLabel *labelPassword;
-    QSpacerItem *horizontalSpacer_4;
     QLineEdit *linePassword;
-    QSpacerItem *verticalSpacer;
-    QHBoxLayout *horizontalLayout_5;
-    QPushButton *buttonSignIn;
-    QSpacerItem *horizontalSpacer_5;
+    QLabel *label_3;
     QPushButton *buttonLogIn;
+    QPushButton *buttonSignIn;
 
     void setupUi(QDialog *loginwindow)
     {
         if (loginwindow->objectName().isEmpty())
             loginwindow->setObjectName("loginwindow");
-        loginwindow->resize(400, 300);
-        groupBox = new QGroupBox(loginwindow);
-        groupBox->setObjectName("groupBox");
-        groupBox->setGeometry(QRect(80, 40, 251, 211));
-        layoutWidget = new QWidget(groupBox);
-        layoutWidget->setObjectName("layoutWidget");
-        layoutWidget->setGeometry(QRect(20, 60, 216, 118));
-        verticalLayout = new QVBoxLayout(layoutWidget);
-        verticalLayout->setObjectName("verticalLayout");
-        verticalLayout->setContentsMargins(0, 0, 0, 0);
-        horizontalLayout_3 = new QHBoxLayout();
-        horizontalLayout_3->setObjectName("horizontalLayout_3");
-        labelLogin = new QLabel(layoutWidget);
-        labelLogin->setObjectName("labelLogin");
-
-        horizontalLayout_3->addWidget(labelLogin);
-
-        horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        horizontalLayout_3->addItem(horizontalSpacer_3);
-
-        lineLogin = new QLineEdit(layoutWidget);
+        loginwindow->resize(585, 450);
+        loginwindow->setMinimumSize(QSize(585, 450));
+        loginwindow->setMaximumSize(QSize(585, 450));
+        loginwindow->setStyleSheet(QString::fromUtf8("background-color: rgb(237, 242, 244);\n"
+"\n"
+""));
+        label = new QLabel(loginwindow);
+        label->setObjectName("label");
+        label->setGeometry(QRect(0, 0, 240, 450));
+        label->setPixmap(QPixmap(QString::fromUtf8(":/new/prefix1/img/LUM3.png")));
+        label->setScaledContents(true);
+        label_2 = new QLabel(loginwindow);
+        label_2->setObjectName("label_2");
+        label_2->setGeometry(QRect(260, 110, 261, 32));
+        QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Fixed);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(label_2->sizePolicy().hasHeightForWidth());
+        label_2->setSizePolicy(sizePolicy);
+        label_2->setStyleSheet(QString::fromUtf8("font-size:  24px; \n"
+"font-weight:  600; \n"
+"color:  rgb(48, 41, 46); "));
+        lineLogin = new QLineEdit(loginwindow);
         lineLogin->setObjectName("lineLogin");
-
-        horizontalLayout_3->addWidget(lineLogin);
-
-
-        verticalLayout->addLayout(horizontalLayout_3);
-
-        horizontalLayout_4 = new QHBoxLayout();
-        horizontalLayout_4->setObjectName("horizontalLayout_4");
-        labelPassword = new QLabel(layoutWidget);
-        labelPassword->setObjectName("labelPassword");
-
-        horizontalLayout_4->addWidget(labelPassword);
-
-        horizontalSpacer_4 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        horizontalLayout_4->addItem(horizontalSpacer_4);
-
-        linePassword = new QLineEdit(layoutWidget);
+        lineLogin->setGeometry(QRect(260, 250, 261, 22));
+        lineLogin->setStyleSheet(QString::fromUtf8("QLineEdit {\n"
+"	border: 0px;\n"
+"	border-bottom: 1px solid #8d99ae;\n"
+"	color: #2b2d42;\n"
+"	padding-left: 10px;\n"
+"	padding-right: 10px;\n"
+"	background-color: #edf2f4;\n"
+"}\n"
+"QLineEdit:hover {\n"
+"	border: 0px;\n"
+"	background-color: #edf2f4;\n"
+"	border-bottom: 1px solid #2b2d42;\n"
+"}\n"
+"QLineEdit:focus{\n"
+"	border: 0px;\n"
+"	background-color: #edf2f4;\n"
+"	border-bottom: 1px solid #2b2d42;\n"
+"}\n"
+""));
+        linePassword = new QLineEdit(loginwindow);
         linePassword->setObjectName("linePassword");
-
-        horizontalLayout_4->addWidget(linePassword);
-
-
-        verticalLayout->addLayout(horizontalLayout_4);
-
-        verticalSpacer = new QSpacerItem(20, 20, QSizePolicy::Minimum, QSizePolicy::Expanding);
-
-        verticalLayout->addItem(verticalSpacer);
-
-        horizontalLayout_5 = new QHBoxLayout();
-        horizontalLayout_5->setObjectName("horizontalLayout_5");
-        buttonSignIn = new QPushButton(layoutWidget);
-        buttonSignIn->setObjectName("buttonSignIn");
-
-        horizontalLayout_5->addWidget(buttonSignIn);
-
-        horizontalSpacer_5 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        horizontalLayout_5->addItem(horizontalSpacer_5);
-
-        buttonLogIn = new QPushButton(layoutWidget);
+        linePassword->setGeometry(QRect(260, 290, 261, 22));
+        linePassword->setStyleSheet(QString::fromUtf8("QLineEdit {\n"
+"	border: 0px;\n"
+"	border-bottom: 1px solid #8d99ae;\n"
+"	color: #2b2d42;\n"
+"	padding-left: 10px;\n"
+"	padding-right: 10px;\n"
+"	background-color: #edf2f4;\n"
+"}\n"
+"QLineEdit:hover {\n"
+"	border: 0px;\n"
+"	background-color: #edf2f4;\n"
+"	border-bottom: 1px solid #2b2d42;\n"
+"}\n"
+"QLineEdit:focus{\n"
+"	border: 0px;\n"
+"	background-color: #edf2f4;\n"
+"	border-bottom: 1px solid #2b2d42;\n"
+"}\n"
+""));
+        linePassword->setEchoMode(QLineEdit::Password);
+        label_3 = new QLabel(loginwindow);
+        label_3->setObjectName("label_3");
+        label_3->setGeometry(QRect(260, 160, 261, 71));
+        sizePolicy.setHeightForWidth(label_3->sizePolicy().hasHeightForWidth());
+        label_3->setSizePolicy(sizePolicy);
+        label_3->setStyleSheet(QString::fromUtf8("font-size:  16px; \n"
+"font-weight:  300; \n"
+"color:  rgb(48, 41, 46); "));
+        label_3->setWordWrap(true);
+        buttonLogIn = new QPushButton(loginwindow);
         buttonLogIn->setObjectName("buttonLogIn");
-
-        horizontalLayout_5->addWidget(buttonLogIn);
-
-
-        verticalLayout->addLayout(horizontalLayout_5);
-
+        buttonLogIn->setGeometry(QRect(412, 409, 173, 41));
+        QSizePolicy sizePolicy1(QSizePolicy::Minimum, QSizePolicy::Expanding);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(buttonLogIn->sizePolicy().hasHeightForWidth());
+        buttonLogIn->setSizePolicy(sizePolicy1);
+        buttonLogIn->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"  color: rgb(237, 242, 244); /* \321\206\320\262\320\265\321\202 \321\202\320\265\320\272\321\201\321\202\320\260 */\n"
+"  border: 0px; /*\320\263\321\200\320\260\320\275\320\270\321\206\320\260*/\n"
+"  background-color: rgb(239, 35, 60); /* \321\204\320\276\320\275 \320\272\320\275\320\276\320\277\320\272\320\270 */\n"
+"} \n"
+"QPushButton:hover { background-color: rgb(217, 4, 41); } /* \320\277\321\200\320\270 \320\275\320\260\320\262\320\265\320\264\320\265\320\275\320\270\320\270 \320\272\321\203\321\200\321\201\320\276\321\200\320\260 \320\274\321\213\321\210\320\272\320\270 */\n"
+"QPushButton:focus { background-color: rgb(217, 4, 41); } /* \320\277\321\200\320\270 \320\275\320\260\320\266\320\260\321\202\320\270\320\270 */"));
+        buttonSignIn = new QPushButton(loginwindow);
+        buttonSignIn->setObjectName("buttonSignIn");
+        buttonSignIn->setGeometry(QRect(240, 409, 172, 41));
+        sizePolicy1.setHeightForWidth(buttonSignIn->sizePolicy().hasHeightForWidth());
+        buttonSignIn->setSizePolicy(sizePolicy1);
+        buttonSignIn->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"  color: rgb(237, 242, 244); /* \321\206\320\262\320\265\321\202 \321\202\320\265\320\272\321\201\321\202\320\260 */\n"
+"  border: 0px; /* \320\263\321\200\320\260\320\275\320\270\321\206\320\260*/\n"
+"  background-color: rgb(141, 153, 174); /* \321\204\320\276\320\275 \320\272\320\275\320\276\320\277\320\272\320\270 */\n"
+"} \n"
+"QPushButton:hover { background-color: rgb(43, 45, 66); } /* \320\277\321\200\320\270 \320\275\320\260\320\262\320\265\320\264\320\265\320\275\320\270\320\270 \320\272\321\203\321\200\321\201\320\276\321\200\320\260 \320\274\321\213\321\210\320\272\320\270 */\n"
+"QPushButton:focus { background-color: rgb(43, 45, 66); } /* \320\277\321\200\320\270 \320\275\320\260\320\266\320\260\321\202\320\270\320\270 */"));
 
         retranslateUi(loginwindow);
 
@@ -130,11 +148,13 @@ public:
     void retranslateUi(QDialog *loginwindow)
     {
         loginwindow->setWindowTitle(QCoreApplication::translate("loginwindow", "Dialog", nullptr));
-        groupBox->setTitle(QCoreApplication::translate("loginwindow", "Log In", nullptr));
-        labelLogin->setText(QCoreApplication::translate("loginwindow", "Login", nullptr));
-        labelPassword->setText(QCoreApplication::translate("loginwindow", "Password", nullptr));
-        buttonSignIn->setText(QCoreApplication::translate("loginwindow", "Sign In", nullptr));
-        buttonLogIn->setText(QCoreApplication::translate("loginwindow", "Log In", nullptr));
+        label->setText(QString());
+        label_2->setText(QCoreApplication::translate("loginwindow", "\320\237\321\200\320\270\320\262\320\265\321\202, \321\217 \321\207\320\260\321\202-\320\261\320\276\321\202 LUM", nullptr));
+        lineLogin->setPlaceholderText(QCoreApplication::translate("loginwindow", "\320\233\320\276\320\263\320\270\320\275", nullptr));
+        linePassword->setPlaceholderText(QCoreApplication::translate("loginwindow", "\320\237\320\260\321\200\320\276\320\273\321\214", nullptr));
+        label_3->setText(QCoreApplication::translate("loginwindow", "\320\222\320\276\320\271\320\264\320\270 \320\262 \320\260\320\272\320\272\320\260\321\203\320\275\321\202, \320\260 \320\265\321\201\320\273\320\270 \320\274\321\213 \320\265\321\211\320\265 \320\275\320\265 \320\267\320\275\320\260\320\272\320\276\320\274\321\213, \321\200\320\265\320\263\320\270\321\201\321\202\321\200\320\270\321\200\321\203\320\271\321\201\321\217 \320\270 \320\275\320\260\321\207\320\270\320\275\320\260\320\271 \320\276\320\261\321\211\320\265\320\275\320\270\320\265", nullptr));
+        buttonLogIn->setText(QCoreApplication::translate("loginwindow", "\320\220\320\222\320\242\320\236\320\240\320\230\320\227\320\220\320\246\320\230\320\257", nullptr));
+        buttonSignIn->setText(QCoreApplication::translate("loginwindow", "\320\240\320\225\320\223\320\230\320\241\320\242\320\240\320\220\320\246\320\230\320\257", nullptr));
     } // retranslateUi
 
 };

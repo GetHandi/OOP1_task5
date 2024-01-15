@@ -232,6 +232,7 @@ Makefile: ..\ChatBot\ChatBot.pro C:\Qt\6.5.0\msvc2019_64\mkspecs\win32-msvc\qmak
 		C:\Qt\6.5.0\msvc2019_64\lib\Qt6Core.prl \
 		C:\Qt\6.5.0\msvc2019_64\lib\Qt6EntryPoint.prl \
 		C:\Qt\6.5.0\msvc2019_64\mkspecs\features\build_pass.prf \
+		..\ChatBot\recources.qrc \
 		C:\Qt\6.5.0\msvc2019_64\lib\Qt6Widgetsd.prl \
 		C:\Qt\6.5.0\msvc2019_64\lib\Qt6Guid.prl \
 		C:\Qt\6.5.0\msvc2019_64\lib\Qt6Cored.prl \
@@ -385,6 +386,7 @@ C:\Qt\6.5.0\msvc2019_64\lib\Qt6Gui.prl:
 C:\Qt\6.5.0\msvc2019_64\lib\Qt6Core.prl:
 C:\Qt\6.5.0\msvc2019_64\lib\Qt6EntryPoint.prl:
 C:\Qt\6.5.0\msvc2019_64\mkspecs\features\build_pass.prf:
+..\ChatBot\recources.qrc:
 C:\Qt\6.5.0\msvc2019_64\lib\Qt6Widgetsd.prl:
 C:\Qt\6.5.0\msvc2019_64\lib\Qt6Guid.prl:
 C:\Qt\6.5.0\msvc2019_64\lib\Qt6Cored.prl:

@@ -46,6 +46,7 @@ public:
         if (signinwindow->objectName().isEmpty())
             signinwindow->setObjectName("signinwindow");
         signinwindow->resize(400, 300);
+        signinwindow->setStyleSheet(QString::fromUtf8("background-color: rgb(189, 213, 234);"));
         groupBox = new QGroupBox(signinwindow);
         groupBox->setObjectName("groupBox");
         groupBox->setGeometry(QRect(70, 30, 251, 211));
@@ -68,6 +69,22 @@ public:
 
         lineLogin = new QLineEdit(layoutWidget);
         lineLogin->setObjectName("lineLogin");
+        lineLogin->setEnabled(true);
+        lineLogin->setStyleSheet(QString::fromUtf8("QLineEdit {\n"
+"	border: 2px solid rgb(37, 39, 48);\n"
+"	border-radius: 10px;\n"
+"	color: #FFF;\n"
+"	padding-left: 10px;\n"
+"	padding-right: 10px;\n"
+"	background-color: rgb(34, 36, 44);\n"
+"}\n"
+"QLineEdit:hover {\n"
+"	border: 2px solid rgb(48, 50, 62);\n"
+"}\n"
+"QLineEdit:focus{\n"
+"	border: 2px solid rgb(85, 170, 255);\n"
+"	background-color: rgb(43, 45, 56);\n"
+"}"));
 
         horizontalLayout_3->addWidget(lineLogin);
 
@@ -87,6 +104,22 @@ public:
 
         linePassword = new QLineEdit(layoutWidget);
         linePassword->setObjectName("linePassword");
+        linePassword->setStyleSheet(QString::fromUtf8("QLineEdit {\n"
+"	border: 2px solid rgb(37, 39, 48);\n"
+"	border-radius: 10px;\n"
+"	color: #FFF;\n"
+"	padding-left: 10px;\n"
+"	padding-right: 10px;\n"
+"	background-color: rgb(34, 36, 44);\n"
+"}\n"
+"QLineEdit:hover {\n"
+"	border: 2px solid rgb(48, 50, 62);\n"
+"}\n"
+"QLineEdit:focus{\n"
+"	border: 2px solid rgb(85, 170, 255);\n"
+"	background-color: rgb(43, 45, 56);\n"
+"}"));
+        linePassword->setEchoMode(QLineEdit::Password);
 
         horizontalLayout_4->addWidget(linePassword);
 
@@ -122,7 +155,9 @@ public:
         signinwindow->setWindowTitle(QCoreApplication::translate("signinwindow", "Dialog", nullptr));
         groupBox->setTitle(QCoreApplication::translate("signinwindow", "Sign In", nullptr));
         labelLogin->setText(QCoreApplication::translate("signinwindow", "Login", nullptr));
+        lineLogin->setPlaceholderText(QCoreApplication::translate("signinwindow", "Login", nullptr));
         labelPassword->setText(QCoreApplication::translate("signinwindow", "Password", nullptr));
+        linePassword->setPlaceholderText(QCoreApplication::translate("signinwindow", "Password", nullptr));
         buttonSignIn->setText(QCoreApplication::translate("signinwindow", "Sign In", nullptr));
     } // retranslateUi
 

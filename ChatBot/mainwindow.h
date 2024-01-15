@@ -7,11 +7,11 @@
 #include <QDebug>
 #include <QMessageBox>
 #include <ctime>
+#include <QWidget>
 
 #include "message.h"
 #include "user.h"
 #include "ui_mainwindow.h"
-#include "signinwindow.h"
 #include "loginwindow.h"
 #include "globals.cpp"
 

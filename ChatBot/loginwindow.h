@@ -7,7 +7,6 @@
 #include <QString>
 
 #include "mainwindow.h"
-#include "signinwindow.h"
 #include "message.h"
 #include "user.h"
 #include "ui_loginwindow.h"

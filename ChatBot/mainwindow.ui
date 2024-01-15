@@ -13,47 +13,63 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(237, 242, 244);
+
+</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QTextBrowser" name="chatWindow">
     <property name="geometry">
      <rect>
-      <x>190</x>
-      <y>40</y>
-      <width>441</width>
-      <height>421</height>
+      <x>0</x>
+      <y>50</y>
+      <width>800</width>
+      <height>500</height>
      </rect>
     </property>
-   </widget>
-   <widget class="QTextEdit" name="messageWindow">
-    <property name="geometry">
-     <rect>
-      <x>190</x>
-      <y>480</y>
-      <width>381</width>
-      <height>64</height>
-     </rect>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="lineWidth">
+     <number>6</number>
     </property>
    </widget>
    <widget class="QLabel" name="nameChatbot">
     <property name="geometry">
      <rect>
-      <x>190</x>
+      <x>10</x>
       <y>10</y>
-      <width>211</width>
+      <width>171</width>
       <height>21</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">font-size:  24px; 
+font-weight:  600; 
+color:  rgb(48, 41, 46); </string>
+    </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:700;&quot;&gt;ChatBot Veniamin ver. 0.1&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:700;&quot;&gt;ChatBot  LUM ver. 0.1&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="messageWindow">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>550</y>
+      <width>750</width>
+      <height>50</height>
+     </rect>
     </property>
    </widget>
    <widget class="QPushButton" name="sendButton">
     <property name="geometry">
      <rect>
-      <x>580</x>
-      <y>490</y>
-      <width>41</width>
-      <height>41</height>
+      <x>750</x>
+      <y>550</y>
+      <width>50</width>
+      <height>50</height>
      </rect>
     </property>
     <property name="text">

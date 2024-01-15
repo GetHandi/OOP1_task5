@@ -25,8 +25,8 @@ class Ui_MainWindow
 public:
     QWidget *centralwidget;
     QTextBrowser *chatWindow;
-    QTextEdit *messageWindow;
     QLabel *nameChatbot;
+    QTextEdit *messageWindow;
     QPushButton *sendButton;
 
     void setupUi(QMainWindow *MainWindow)
@@ -34,20 +34,28 @@ public:
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
         MainWindow->resize(800, 600);
+        MainWindow->setStyleSheet(QString::fromUtf8("background-color: rgb(237, 242, 244);\n"
+"\n"
+""));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
         chatWindow = new QTextBrowser(centralwidget);
         chatWindow->setObjectName("chatWindow");
-        chatWindow->setGeometry(QRect(190, 40, 441, 421));
-        messageWindow = new QTextEdit(centralwidget);
-        messageWindow->setObjectName("messageWindow");
-        messageWindow->setGeometry(QRect(190, 480, 381, 64));
+        chatWindow->setGeometry(QRect(0, 50, 800, 500));
+        chatWindow->setAutoFillBackground(false);
+        chatWindow->setLineWidth(6);
         nameChatbot = new QLabel(centralwidget);
         nameChatbot->setObjectName("nameChatbot");
-        nameChatbot->setGeometry(QRect(190, 10, 211, 21));
+        nameChatbot->setGeometry(QRect(10, 10, 171, 21));
+        nameChatbot->setStyleSheet(QString::fromUtf8("font-size:  24px; \n"
+"font-weight:  600; \n"
+"color:  rgb(48, 41, 46); "));
+        messageWindow = new QTextEdit(centralwidget);
+        messageWindow->setObjectName("messageWindow");
+        messageWindow->setGeometry(QRect(0, 550, 750, 50));
         sendButton = new QPushButton(centralwidget);
         sendButton->setObjectName("sendButton");
-        sendButton->setGeometry(QRect(580, 490, 41, 41));
+        sendButton->setGeometry(QRect(750, 550, 50, 50));
         sendButton->setAutoDefault(false);
         MainWindow->setCentralWidget(centralwidget);
 
@@ -62,7 +70,7 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
-        nameChatbot->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:12pt; font-weight:700;\">ChatBot Veniamin ver. 0.1</span></p></body></html>", nullptr));
+        nameChatbot->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:12pt; font-weight:700;\">ChatBot  LUM ver. 0.1</span></p></body></html>", nullptr));
         sendButton->setText(QCoreApplication::translate("MainWindow", "SEND", nullptr));
     } // retranslateUi
 
