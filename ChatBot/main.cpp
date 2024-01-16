@@ -1,9 +1,6 @@
 #include <QApplication>
 
 #include "loginwindow.h"
-#include "mainwindow.h"
-#include "message.h"
-#include "user.h"
 
 #include <QDebug>
 #include <QMap>
@@ -22,14 +19,14 @@ int main(int argc, char *argv[])
     w.setWindowTitle("Чат-бот LUM");
     w.show();
 
-    QMap <QString, QVector<QString>> hi;
-    hi["hi"] = {"Привет", "Прив", "Hello", "Hi", "Здравствуй",
-                                                "Здарова", "Здравствуйте", "Добрый день", "Доброго времени суток"};
+//    QMap <QString, QVector<QString>> hi;
+//    hi["hi"] = {"Привет", "Прив", "Hello", "Hi", "Здравствуй",
+//                                                "Здарова", "Здравствуйте", "Добрый день", "Доброго времени суток"};
 
-    for (auto now : hi["hi"])
-    {
-        qInfo() << now << " ";
-    }
+//    for (const auto &now : hi["hi"])
+//    {
+//        qInfo() << now << " ";
+//    }
 
 
 

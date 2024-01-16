@@ -7,6 +7,7 @@
 *****************************************************************************/
 
 #include "../../ChatBot/loginwindow.h"
+#include <QtNetwork/QSslError>
 #include <QtGui/qtextcursor.h>
 #include <QtCore/qmetatype.h>
 
