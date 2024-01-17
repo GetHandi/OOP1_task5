@@ -18,29 +18,25 @@ private:
 
 
 public:
-    /// конструктор по умолчанию;
-    Message();
+    Message();    /// конструктор по умолчанию;
 
-    /// конструктор;
-    Message(const QTime &new_time, const QString &new_name, const QString &new_message);
+    Message(const QTime &new_time, const QString &new_name, const QString &new_message);    /// конструктор;
 
-    /// Геттер для времени (не изменяет объекты);
-    QTime getTime() const;
+    QTime getTime() const;    /// Геттер для времени (не изменяет объекты);
 
-    /// Геттер для имени (не изменяет объекты);
-    QString getName() const;
+    QString getName() const;    /// Геттер для имени (не изменяет объекты);
 
-    /// Геттер для сообщения (не изменяет объекты);
-    QString getMessage() const;
+    QString getMessage() const;    /// Геттер для сообщения (не изменяет объекты);
 
-    /// Сеттер для сообщения;
-    void setMessage(const QString &new_message);
+    void setTime (const QTime &new_time);    /// Сеттер для сообщения;
 
-    /// Дружественная функция чтения из файла;
-    friend QDataStream& operator>>( QDataStream& D, Message& M );
+    void setName(const QString &new_name);    /// Сеттер для сообщения;
 
-    /// Дружественная функция записи в файл;
-    friend QDataStream& operator<<( QDataStream& D, const Message& M );
+    void setMessage(const QString &new_message);    /// Сеттер для сообщения;
+
+    friend QDataStream& operator>>( QDataStream& D, Message& M );    /// Дружественная функция чтения из файла;
+
+    friend QDataStream& operator<<( QDataStream& D, const Message& M );    /// Дружественная функция записи в файл;
 };
 
 #endif // MESSAGE_H

@@ -29,6 +29,16 @@ QString Message::getMessage() const
     return message;
 }
 
+void Message::setTime(const QTime &new_time)
+{
+    time = new_time;
+}
+
+void Message::setName(const QString &new_name)
+{
+    name = new_name;
+}
+
 void Message::setMessage(const QString &new_message)
 {
     message = new_message;
