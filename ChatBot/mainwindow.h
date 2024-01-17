@@ -16,6 +16,7 @@
 #include <QNetworkReply>
 #include <QUrl>
 #include <QRegularExpression>
+#include <QKeyEvent>
 
 #include "message.h"
 #include "user.h"
@@ -42,6 +43,8 @@ private slots:
     // Обработчик данных полученных от объекта QNetworkAccessManager;
     void onResult(QNetworkReply *reply);
 
+
+    void on_messageWindow_textChanged();
 
 private:
     Ui::MainWindow *ui;

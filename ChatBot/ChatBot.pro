@@ -15,12 +15,14 @@ SOURCES += \
     loginwindow.cpp \
     mainwindow.cpp \
     message.cpp \
+    processing_request.cpp \
     user.cpp
 
 HEADERS += \
     loginwindow.h \
     mainwindow.h \
     message.h \
+    processing_request.h \
     user.h
 
 FORMS += \

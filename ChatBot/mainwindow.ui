@@ -10,6 +10,18 @@
     <height>600</height>
    </rect>
   </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
@@ -28,8 +40,15 @@
       <height>500</height>
      </rect>
     </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
     <property name="autoFillBackground">
      <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">padding: 1em;
+border: 0px;</string>
     </property>
     <property name="lineWidth">
      <number>6</number>
@@ -40,7 +59,7 @@
      <rect>
       <x>10</x>
       <y>10</y>
-      <width>171</width>
+      <width>221</width>
       <height>21</height>
      </rect>
     </property>
@@ -50,7 +69,7 @@ font-weight:  600;
 color:  rgb(48, 41, 46); </string>
     </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:700;&quot;&gt;ChatBot  LUM ver. 0.1&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:700;&quot;&gt;ChatBot  LUM ver. 0.1 (alpha)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
    <widget class="QTextEdit" name="messageWindow">
@@ -62,6 +81,19 @@ color:  rgb(48, 41, 46); </string>
       <height>50</height>
      </rect>
     </property>
+    <property name="focusPolicy">
+     <enum>Qt::TabFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">padding: 5px;
+border: 0px;</string>
+    </property>
+    <property name="tabChangesFocus">
+     <bool>false</bool>
+    </property>
+    <property name="placeholderText">
+     <string>Введите сообщение ...</string>
+    </property>
    </widget>
    <widget class="QPushButton" name="sendButton">
     <property name="geometry">
@@ -71,6 +103,15 @@ color:  rgb(48, 41, 46); </string>
       <width>50</width>
       <height>50</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+  color: rgb(237, 242, 244); /* цвет текста */
+  border: 0px; /*граница*/
+  background-color: rgb(239, 35, 60); /* фон кнопки */
+} 
+QPushButton:hover { background-color: rgb(217, 4, 41); } /* при наведении курсора мышки */
+QPushButton:focus { background-color: rgb(217, 4, 41); } /* при нажатии */</string>
     </property>
     <property name="text">
      <string>SEND</string>
@@ -82,6 +123,10 @@ color:  rgb(48, 41, 46); </string>
      <bool>true</bool>
     </property>
    </widget>
+   <zorder>chatWindow</zorder>
+   <zorder>nameChatbot</zorder>
+   <zorder>sendButton</zorder>
+   <zorder>messageWindow</zorder>
   </widget>
  </widget>
  <resources/>

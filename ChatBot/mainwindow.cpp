@@ -30,6 +30,8 @@ MainWindow::~MainWindow()
 // Обработка нажатия кнопки отправить сообщение;
 void MainWindow::on_sendButton_clicked()
 {
+    ui->sendButton->setAttribute(Qt::WA_InputMethodEnabled);
+
     // Если в поле сообщения пусто, ничего не происходит;
     if (ui->messageWindow->toPlainText() == ""){}
     // Иначе
@@ -56,8 +58,6 @@ void MainWindow::on_sendButton_clicked()
          * QJsonObject root = readToJsonObject();
          * ui->chatWindow->append(root.keys().at(0) + ": " + root.value(root.keys().at(0)).toString());
         */
-
-        // - отдельно функцию currency, которая ищет по root ключи и возвращает answer, который как раз мы и вставляем в ответ бота;
 
         // Создаем переменную ответа для чат-бота с дефолтным содержимым, в случае не распознования сообщения от пользователя;
         QString answer = "Простите я Вас не понимаю, напишите /menu для просмотра моих возможностей";
@@ -183,7 +183,6 @@ void MainWindow::on_sendButton_clicked()
         file.close();
     }
 }
-
 
 void MainWindow::getJson(QString url)
 {
@@ -346,6 +345,7 @@ void MainWindow::onResult(QNetworkReply *reply)
     }
     reply->deleteLater();
 }
+
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 QJsonObject MainWindow::readToJsonObject()
@@ -417,4 +417,15 @@ file.close();
         else if (message.getMessage().contains("умножить"))
             message_bot.setMessage("Текущее время системы: " + QTime::currentTime().toString("hh:mm"));
         */
+
+
+void MainWindow::on_messageWindow_textChanged()
+{
+    QString text = ui->messageWindow->toPlainText();
+    if (text.contains("\n"))
+    {
+        // Вызов сигнала кнопки;
+        ui->sendButton->click();
+    }
+}
 
